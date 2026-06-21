@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Best Practices -->
+  <title>Outfit Planner - Upload, Pair, and Style Your Closet</title>
+  <meta name="description" content="Outfit Planner is the ultimate light-themed iOS app to digitize your closet. Snap photos of your clothes, upload them to your personal wardrobe, and curate stunning pairs for college, party, and casual wear instantly.">
+  <meta name="keywords" content="closet uploader, outfit planner, clothing pairings, daily college dress, party outfits, fashion visualizer, ios app closet">
+  <meta name="author" content="Outfit Planner Studio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Outfit Planner - Upload, Pair, and Style Your Closet">
+  <meta property="og:description" content="Digitize your wardrobe, snap and upload clothes, and create beautiful styling pairs for college and parties.">
+  <meta property="og:image" content="https://outfitplanner.app/og-image-light.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Outfit Planner - Upload, Pair, and Style Your Closet">
+  <meta property="twitter:description" content="Digitize your wardrobe, snap and upload clothes, and create beautiful styling pairs for college and parties.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons for high-fidelity vector look -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Floating Orbs Atmospheric Background (Optimized for Light Theme) -->
+  <div class="floating-orbs-container" id="bg-orbs-container">
+    <div class="orb orb-purple" id="orb-p"></div>
+    <div class="orb orb-coral" id="orb-c"></div>
+    <div class="orb orb-indigo" id="orb-i"></div>
+    <div class="orb orb-mint" id="orb-m"></div>
+    
+    <!-- Header Navigation -->
+    <header class="app-header">
+      <div class="header-container">
+        <div class="brand-logo">
+          <div class="logo-icon">✨</div>
+          <div class="brand-text">
+            <span class="brand-title-large">OUTFIT</span>
+            <span class="brand-subtitle-large">PLANNER</span>
+          </div>
+        </div>
+        
+        <nav class="nav-menu">
+          <a href="#features" class="nav-link">App Features</a>
+          <a href="#builder" class="nav-link">Occasion Pairing</a>
+          <a href="#showcase" class="nav-link">Digital Closet</a>
+          <a href="#newsletter" class="nav-link">Get Beta Invitation</a>
+        </nav>
+        
+        <div class="header-actions">
+          <a href="#newsletter" class="btn btn-primary btn-sm" id="download-nav-btn">DOWNLOAD APP</a>
+        </div>
+        
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#features" class="mobile-link">App Features</a>
+      <a href="#builder" class="mobile-link">Occasion Pairing</a>
+      <a href="#showcase" class="mobile-link">Digital Closet</a>
+      <a href="#newsletter" class="mobile-link">Get Beta Invitation</a>
+      <a href="#newsletter" class="btn btn-primary btn-sm">DOWNLOAD APP</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="badge-new">
+              <span class="badge-dot"></span> NEW: INSTANT BACKGROUND REMOVAL
+            </div>
+            <h1 class="hero-title">
+              Upload Your Clothes.<br>
+              <span class="text-gradient">Pair Instantly.</span>
+            </h1>
+            <p class="brand-tagline">"Style is a way to say who you are without having to speak."</p>
+            <p class="hero-description">
+              Outfit Planner lets you photograph and upload your entire physical wardrobe in minutes. Effortlessly design matching pairs for daily college classes, weekend parties, and high-impact meetings, driven by smart coordination metrics.
+            </p>
+            <div class="hero-ctas">
+              <button class="btn btn-primary" id="explore-wardrobe-btn" onclick="scrollToSection('builder')">
+                TRY THE BUILDER <i data-lucide="arrow-right" class="btn-icon"></i>
+              </button>
+              <button class="btn btn-accent" id="create-outfit-btn" onclick="scrollToSection('newsletter')">
+                JOIN TESTFLIGHT <i data-lucide="smartphone" class="btn-icon"></i>
+              </button>
+            </div>
+            
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">40k+</span>
+                <span class="stat-label">Garments Uploaded</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">4.9 ★</span>
+                <span class="stat-label">App Store Reviews</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Pairing Accuracy</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hero Mockup Side -->
+          <div class="hero-mockup-wrapper">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <!-- Mockup App Header -->
+                <div class="mock-header">
+                  <span class="mock-time">9:41</span>
+                  <div class="mock-icons">
+                    <i data-lucide="signal" class="mock-status-icon"></i>
+                    <i data-lucide="wifi" class="mock-status-icon"></i>
+                    <i data-lucide="battery" class="mock-status-icon"></i>
+                  </div>
+                </div>
+                
+                <div class="mock-app-bar">
+                  <div class="mock-avatar">👗</div>
+                  <div class="mock-title-group">
+                    <span class="mock-greeting">My Closet Planner</span>
+                    <span class="mock-subtitle">Digital Wardrobe Connected</span>
+                  </div>
+                  <i data-lucide="bell" class="mock-bell-icon"></i>
+                </div>
+
+                <!-- Weather widget -->
+                <div class="mock-weather-widget">
+                  <div class="weather-info">
+                    <i data-lucide="cloud-sun" class="weather-icon-sun"></i>
+                    <div>
+                      <div class="weather-temp">Mild College Day • 68°F</div>
+                      <div class="weather-cond">Perfect for denim layers & light knits</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Active Outfit Showcase -->
+                <div class="glass-card mock-outfit-card">
+                  <div class="mock-card-header">
+                    <span class="mock-card-tag" id="mock-active-occasion">DAILY COLLEGE</span>
+                    <span class="mock-card-action">Outfit Pair</span>
+                  </div>
+                  
+                  <!-- Outfit Visual Showcase with Vector SVGs -->
+                  <div class="mock-outfit-showcase">
+                    <div class="outfit-slot-circle slot-top active-glow" id="mock-slot-top">
+                      <span class="slot-badge badge-top">Top</span>
+                      <div class="slot-svg-container" id="mock-svg-top">
+                        <!-- Populated dynamically with custom SVGs -->
+                      </div>
+                      <span class="slot-name" id="mock-name-top">Crewneck Knit</span>
+                    </div>
+                    <div class="outfit-slot-circle slot-bottom active-glow" id="mock-slot-bottom">
+                      <span class="slot-badge badge-bottom">Bottom</span>
+                      <div class="slot-svg-container" id="mock-svg-bottom">
+                        <!-- Populated dynamically with custom SVGs -->
+                      </div>
+                      <span class="slot-name" id="mock-name-bottom">Denim Slacks</span>
+                    </div>
+                    <div class="outfit-slot-circle slot-shoes active-glow" id="mock-slot-shoes">
+                      <span class="slot-badge badge-shoes">Shoes</span>
+                      <div class="slot-svg-container" id="mock-svg-shoes">
+                        <!-- Populated dynamically with custom SVGs -->
+                      </div>
+                      <span class="slot-name" id="mock-name-shoes">Minimal Sneakers</span>
+                    </div>
+                    <div class="outfit-slot-circle slot-accessory active-glow" id="mock-slot-accessory">
+                      <span class="slot-badge badge-accessory">Wearable</span>
+                      <div class="slot-svg-container" id="mock-svg-accessory">
+                        <!-- Populated dynamically with custom SVGs -->
+                      </div>
+                      <span class="slot-name" id="mock-name-accessory">Retro Glasses</span>
+                    </div>
+                  </div>
+
+                  <div class="harmony-score">
+                    <div class="score-bar-bg">
+                      <div class="score-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <span class="score-text">Pairing Score: 95%</span>
+                  </div>
+                </div>
+
+                <!-- Closet upload mockup bar -->
+                <div class="mock-uploader-panel">
+                  <button class="btn-uploader-mock">
+                    <i data-lucide="plus-circle" class="upl-icon"></i>
+                    <span>Upload New Garment</span>
+                  </button>
+                </div>
+
+                <!-- Mock Navigation Tab Bar -->
+                <div class="mock-tab-bar">
+                  <div class="tab-item active"><i data-lucide="layout-grid"></i><span>Closet</span></div>
+                  <div class="tab-item"><i data-lucide="images"></i><span>Lookbooks</span></div>
+                  <div class="tab-item add-tab-btn"><i data-lucide="plus"></i></div>
+                  <div class="tab-item"><i data-lucide="sparkles"></i><span>Stylist</span></div>
+                  <div class="tab-item"><i data-lucide="settings"></i><span>Settings</span></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Absolute Decorative Elements floating behind phone -->
+            <div class="mock-decor decor-top-left badge-outerwear">
+              <i data-lucide="shirt" class="decor-i"></i> Scan and Tag
+            </div>
+            <div class="mock-decor decor-bottom-right badge-fullbody">
+              <i data-lucide="check" class="decor-i"></i> Pair Formed
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Features Section -->
+      <section class="features-section" id="features">
+        <div class="section-header">
+          <h2 class="section-title">Master Your Wardrobe</h2>
+          <p class="section-subtitle">A highly optimized light-weight framework to coordinate items and look your absolute best.</p>
+        </div>
+        
+        <div class="features-grid">
+          
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper purple-glow">
+              <i data-lucide="camera" class="feature-icon text-purple"></i>
+            </div>
+            <h3>Quick Garment Upload</h3>
+            <p>Snap a photo of your tops, pants, jackets, or shoes. Our integrated edge-detection AI instantly crops backgrounds, leaving just your clean clothing item.</p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper coral-glow">
+              <i data-lucide="git-merge" class="feature-icon text-coral"></i>
+            </div>
+            <h3>Intelligent Pair Engine</h3>
+            <p>Select a garment and see what matches instantly. The app generates pairing options custom-tailored for your height, fit, and local styling preferences.</p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper mint-glow">
+              <i data-lucide="graduation-cap" class="feature-icon text-mint"></i>
+            </div>
+            <h3>Daily College Styling</h3>
+            <p>Need comfortable, clean, yet fashionable everyday looks for class? The engine coordinates breezy denim, light knits, and walking sneakers instantly.</p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper gold-glow">
+              <i data-lucide="party-popper" class="feature-icon text-gold"></i>
+            </div>
+            <h3>Party & Event Coordinates</h3>
+            <p>Elevate your coordinates for night outings. Get recommendation scores for high-contrast colors, chic outerwear pairings, and bold statement accessories.</p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper indigo-glow">
+              <i data-lucide="cloud-lightning" class="feature-icon text-indigo"></i>
+            </div>
+            <h3>Smart Weather & Temp Sync</h3>
+            <p>College classes under drizzle? A hot summer patio party? Outfit Planner updates suggestions automatically based on temperature forecasts.</p>
+          </div>
+
+          <div class="glass-card feature-card">
+            <div class="feature-icon-wrapper accessory-glow">
+              <i data-lucide="sparkles" class="feature-icon text-accessory"></i>
+            </div>
+            <h3>High-Contrast Visualizer</h3>
+            <p>Browse your wardrobe as a clean digital layout. Categorize tops, bottoms, shoes, and wearables, ensuring no garment sits unworn.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interactive Outfit Builder Widget -->
+      <section class="builder-section" id="builder">
+        <div class="builder-container">
+          
+          <div class="builder-info">
+            <div class="badge-interactive">INTERACTIVE PRACTICE</div>
+            <h2 class="builder-title">Craft Your Perfect Coordinate</h2>
+            <p class="builder-desc">
+              Experience the core app workflow: choose an occasion to define styling standards, then click wardrobe items on the right to construct custom pairs.
+            </p>
+            
+            <!-- Occasion Selector Container -->
+            <div class="occasion-selector-container glass-card">
+              <h4 class="occ-hdr-title">SELECT OCCASION</h4>
+              <div class="occasion-chips-grid">
+                <button class="occ-chip active" onclick="selectOccasion('college')">
+                  <i data-lucide="graduation-cap"></i> Daily College
+                </button>
+                <button class="occ-chip" onclick="selectOccasion('party')">
+                  <i data-lucide="party-popper"></i> Night Club / Party
+                </button>
+                <button class="occ-chip" onclick="selectOccasion('brunch')">
+                  <i data-lucide="coffee"></i> Weekend Brunch
+                </button>
+                <button class="occ-chip" onclick="selectOccasion('workout')">
+                  <i data-lucide="dumbbell"></i> Gym / Workout
+                </button>
+              </div>
+            </div>
+            
+            <div class="harmony-feedback-panel glass-card">
+              <div class="feedback-hdr">
+                <i data-lucide="sparkles" class="text-gold animated-sparkle"></i>
+                <h4>AI Stylist Feedback</h4>
+              </div>
+              <p class="feedback-text" id="ai-stylist-feedback">
+                Select your clothes to see suitability. Each occasion has different guidelines!
+              </p>
+              <div class="feedback-badges-row">
+                <span class="active-badge" id="style-tag">Minimal Classic</span>
+                <span class="active-badge" id="temp-tag">Occasion Suitable</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Closet Selection Board -->
+          <div class="glass-card builder-closet-board">
+            <h3 class="board-title">Closet Uploads</h3>
+            
+            <div class="closet-category-section">
+              <h4 class="closet-cat-title"><span class="badge-cat badge-top-pill">TOPS</span> Select Top Garment</h4>
+              <div class="closet-items-grid" id="tops-closet">
+                <!-- Tops will be populated via JS with vector graphics -->
+              </div>
+            </div>
+
+            <div class="closet-category-section">
+              <h4 class="closet-cat-title"><span class="badge-cat badge-bottom-pill">BOTTOMS</span> Select Bottom Garment</h4>
+              <div class="closet-items-grid" id="bottoms-closet">
+                <!-- Bottoms will be populated via JS with vector graphics -->
+              </div>
+            </div>
+
+            <div class="closet-category-section">
+              <h4 class="closet-cat-title"><span class="badge-cat badge-shoes-pill">SHOES</span> Select Footwear</h4>
+              <div class="closet-items-grid" id="shoes-closet">
+                <!-- Shoes will be populated via JS with vector graphics -->
+              </div>
+            </div>
+
+            <div class="closet-category-section">
+              <h4 class="closet-cat-title"><span class="badge-cat badge-accessory-pill">WEARABLES</span> Select Accessories</h4>
+              <div class="closet-items-grid" id="accessories-closet">
+                <!-- Accessories will be populated via JS with vector graphics -->
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section>
+
+      <!-- App Interface Showcase & Style Showcase -->
+      <section class="showcase-section" id="showcase">
+        <div class="section-header">
+          <h2 class="section-title">Upload & Segment Your Clothes</h2>
+          <p class="section-subtitle">Our iOS app makes organizing garments visual and instant. Here is how it looks.</p>
+        </div>
+        
+        <div class="showcase-carousel-container">
+          <div class="showcase-card glass-card">
+            <div class="showcase-img-placeholder">
+              <div class="mock-iphone-screen-static screen-blue">
+                <div class="screen-content">
+                  <div class="screen-title">Visual Uploader</div>
+                  <div class="screen-subtitle">Automatic background remover</div>
+                  <div class="camera-sync-graphic">
+                    <i data-lucide="scan" class="camera-upload-icon"></i>
+                  </div>
+                  <div class="sync-status">Processing garment: isolated with 99.4% precision</div>
+                </div>
+              </div>
+            </div>
+            <h3>Instant Background Removal</h3>
+            <p>Hold up your garment against any door or wall. We isolate the item, normalize lighting, and save it straight to your digital closet catalog.</p>
+          </div>
+
+          <div class="showcase-card glass-card">
+            <div class="showcase-img-placeholder">
+              <div class="mock-iphone-screen-static screen-dark">
+                <div class="screen-content">
+                  <div class="screen-title">Occasion Presets</div>
+                  <div class="screen-subtitle">College, Club, Gym, Meetings</div>
+                  <div class="presets-graphic">
+                    <i data-lucide="tags" class="presets-icon"></i>
+                  </div>
+                  <div class="sync-status">All categorizations automatically assigned</div>
+                </div>
+              </div>
+            </div>
+            <h3>Smart Occasion Labels</h3>
+            <p>Our recommendation engine tags upload records automatically into college, evening party, formal wear, or athletic sportswear classes.</p>
+          </div>
+
+          <div class="showcase-card glass-card">
+            <div class="showcase-img-placeholder">
+              <div class="mock-iphone-screen-static screen-purple">
+                <div class="screen-content">
+                  <div class="screen-title">Pair Statistics</div>
+                  <div class="screen-subtitle">Your wardrobe utilization</div>
+                  <div class="chart-sim">
+                    <div class="chart-bar" style="height: 35%"></div>
+                    <div class="chart-bar" style="height: 50%"></div>
+                    <div class="chart-bar" style="height: 85%"></div>
+                    <div class="chart-bar" style="height: 60%"></div>
+                    <div class="chart-bar" style="height: 40%"></div>
+                  </div>
+                  <div class="sync-status">Unmatched garments: 5% (Down from 45%)</div>
+                </div>
+              </div>
+            </div>
+            <h3>Wardrobe Utility Analytics</h3>
+            <p>Find out which clothing items you wear the least. Outfit Planner suggests pairs to revive items you rarely wear, saving budget and waste.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Newsletter & Signup Forms Showcase -->
+      <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-container glass-card">
+          <div class="newsletter-info-pane">
+            <h2 class="news-title">Get Early TestFlight Invitation</h2>
+            <p class="news-desc">
+              Outfit Planner is currently running its early private beta. Enter your Apple ID email address to receive an immediate invite to upload your clothes and start pairing today.
+            </p>
+            <div class="ios-badge-wrapper">
+              <div class="ios-badge">
+                <i data-lucide="smartphone" class="badge-icon"></i>
+                <div class="badge-txt">
+                  <span class="b-sub">Download on</span>
+                  <span class="b-main">App Store</span>
+                </div>
+              </div>
+              <div class="ios-badge">
+                <i data-lucide="activity" class="badge-icon"></i>
+                <div class="badge-txt">
+                  <span class="b-sub">Download via</span>
+                  <span class="b-main">TestFlight</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="newsletter-forms-pane">
+            <div class="form-showcase-box">
+              <h4 class="form-header-title">DESIGN A: GLASSMORPHIC INPUT</h4>
+              <form id="glass-form" onsubmit="handleFormSubmit(event, 'glass')">
+                <div class="glass-input-wrapper">
+                  <span class="icon">✉️</span>
+                  <input type="email" placeholder="your.appleid@email.com" class="glass-input" id="glass-email-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full-width">REQUEST INVITE LINK</button>
+              </form>
+              <div class="success-message" id="glass-success">
+                <i data-lucide="check-circle" class="success-icon"></i> Success! Check your Apple ID email for the TestFlight invitation.
+              </div>
+            </div>
+
+            <div class="form-showcase-box">
+              <h4 class="form-header-title">DESIGN B: MINIMALIST INPUT</h4>
+              <form id="minimal-form" onsubmit="handleFormSubmit(event, 'minimal')">
+                <div class="minimal-input-wrapper">
+                  <label class="minimal-label" for="minimal-email-input">Email Address</label>
+                  <input type="email" placeholder="your.appleid@email.com" class="minimal-input" id="minimal-email-input" required>
+                </div>
+                <button type="submit" class="btn btn-accent btn-full-width">JOIN PRIVATE BETA</button>
+              </form>
+              <div class="success-message" id="minimal-success">
+                <i data-lucide="check-circle" class="success-icon"></i> Redirection link sent to email!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">✨</div>
+          <div class="footer-brand-text">
+            <span class="brand-title-large">OUTFIT</span>
+            <span class="brand-subtitle-large">PLANNER</span>
+          </div>
+        </div>
+        
+        <p class="footer-tagline">Making your physical closet digital, visual, and smart.</p>
+        
+        <div class="footer-links">
+          <a href="#features" class="foot-link">Features</a>
+          <a href="#builder" class="foot-link">Interactive Builder</a>
+          <a href="#showcase" class="foot-link">Showcase</a>
+          <a href="#newsletter" class="foot-link">Download Beta</a>
+          <a href="#" class="foot-link">Privacy Policy</a>
+          <a href="#" class="foot-link">Terms of Service</a>
+        </div>
+        
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Github"><i data-lucide="github"></i></a>
+        </div>
+        
+        <p class="footer-copyright">&copy; 2026 Outfit Planner Studio. All rights reserved. Designed natively for iOS devices.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Javascript File -->
+  <script src="app.js"></script>
+</body>
+</html>
