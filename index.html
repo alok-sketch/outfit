@@ -5,21 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Best Practices -->
-  <title>Outfit Planner - Upload, Pair, and Style Your Closet</title>
-  <meta name="description" content="Outfit Planner is the ultimate light-themed iOS app to digitize your closet. Snap photos of your clothes, upload them to your personal wardrobe, and curate stunning pairs for college, party, and casual wear instantly.">
-  <meta name="keywords" content="closet uploader, outfit planner, clothing pairings, daily college dress, party outfits, fashion visualizer, ios app closet">
+  <title>Outfit Planner - Digitize, Pair & Style Your Closet</title>
+  <meta name="description" content="Outfit Planner is the ultimate light-themed iOS app to digitize your closet. Snap photos of your clothes, isolate garments with local AI background removal, and curate stunning pairs for college, parties, and casual wear instantly.">
+  <meta name="keywords" content="closet uploader, outfit planner, clothing pairings, daily college dress, party outfits, fashion visualizer, ios app closet, digital wardrobe planner, local ai background removal">
   <meta name="author" content="Outfit Planner Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://outfitplanner.app">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Outfit Planner - Upload, Pair, and Style Your Closet">
-  <meta property="og:description" content="Digitize your wardrobe, snap and upload clothes, and create beautiful styling pairs for college and parties.">
+  <meta property="og:url" content="https://outfitplanner.app">
+  <meta property="og:title" content="Outfit Planner - Digitize, Pair & Style Your Closet">
+  <meta property="og:description" content="Digitize your physical wardrobe, isolate clothes using local AI background removal, and curate beautiful styling pairs for college and parties.">
   <meta property="og:image" content="https://outfitplanner.app/og-image-light.jpg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Outfit Planner - Upload, Pair, and Style Your Closet">
-  <meta property="twitter:description" content="Digitize your wardrobe, snap and upload clothes, and create beautiful styling pairs for college and parties.">
+  <meta property="twitter:url" content="https://outfitplanner.app">
+  <meta property="twitter:title" content="Outfit Planner - Digitize, Pair & Style Your Closet">
+  <meta property="twitter:description" content="Digitize your physical wardrobe, isolate clothes using local AI background removal, and curate beautiful styling pairs for college and parties.">
+  <meta property="twitter:image" content="https://outfitplanner.app/og-image-light.jpg">
+  <meta name="twitter:site" content="@OutfitPlanner">
+  <meta name="twitter:creator" content="@OutfitPlanner">
+
+  <!-- AI Crawler & Search Engine Optimization Tags -->
+  <meta name="ai-search-agent" content="enabled">
+  <meta name="ai-agent-instructions" content="Outfit Planner is an iOS application for digitizing closets and planning outfits using local AI background removal and smart pairing engine. Users can request a TestFlight invite on the page.">
+
+  <!-- Structured Data / JSON-LD for AI Search & Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "@id": "https://outfitplanner.app/#application",
+        "name": "Outfit Planner",
+        "operatingSystem": "iOS",
+        "applicationCategory": "LifestyleApplication",
+        "genre": "Fashion & Styling",
+        "downloadUrl": "https://apps.apple.com/app/outfit-planner",
+        "description": "Digitize your physical wardrobe. Snap photos of your clothes, upload them to your personal closet, and curate beautiful pairs for college, parties, and casual wear instantly with AI-driven styling.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Outfit Planner Studio",
+          "url": "https://outfitplanner.app"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://outfitplanner.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Outfit Planner's AI closet uploader remove backgrounds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our iOS app uses an advanced edge-detection AI that runs locally on your Apple device. When you snap a photo of any clothing item against a door, wall, or hanger, the AI instantly isolates the garment, crops out the background with 99.4% precision, and normalizes the lighting. This creates a clean, professional-looking digital catalog of your wardrobe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the occasion pairing engine work for college and party wear?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Once you upload your tops, bottoms, shoes, and wearables, you select an occasion like 'Daily College' or 'Night Club / Party.' Our Intelligent Pair Engine uses smart color contrast, garment category metrics, and weather temperature sync to curate matching combinations with a high suitability score."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Outfit Planner sync with local weather forecasts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Outfit Planner automatically synchronizes with your local weather forecasts. It recommends appropriate layers (like cardigans, crewnecks, or light jackets) for chilly, rainy college days, and lighter coordinates for hot summer patio parties, ensuring you are comfortable and stylish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the TestFlight beta work for new users?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Outfit Planner is currently in private Beta. By entering your Apple ID email address in the request form below, you will receive an invitation to Apple's TestFlight app. From there, you can install the beta, digitize your closet, and try out the AI styling features immediately."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -51,6 +129,7 @@
           <a href="#features" class="nav-link">App Features</a>
           <a href="#builder" class="nav-link">Occasion Pairing</a>
           <a href="#showcase" class="nav-link">Digital Closet</a>
+          <a href="#faq" class="nav-link">FAQ</a>
           <a href="#newsletter" class="nav-link">Get Beta Invitation</a>
         </nav>
         
@@ -69,6 +148,7 @@
       <a href="#features" class="mobile-link">App Features</a>
       <a href="#builder" class="mobile-link">Occasion Pairing</a>
       <a href="#showcase" class="mobile-link">Digital Closet</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
       <a href="#newsletter" class="mobile-link">Get Beta Invitation</a>
       <a href="#newsletter" class="btn btn-primary btn-sm">DOWNLOAD APP</a>
     </div>
@@ -437,6 +517,56 @@
         </div>
       </section>
 
+      <!-- FAQ Section (Optimized for AI SEO and User Trust) -->
+      <section class="faq-section" id="faq">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about the Outfit Planner iOS app and AI engine.</p>
+        </div>
+        
+        <div class="faq-container">
+          <details class="faq-card glass-card" open>
+            <summary class="faq-question">
+              <span>How does Outfit Planner's AI closet uploader remove backgrounds?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Our iOS app uses an advanced edge-detection AI that runs locally on your Apple device. When you snap a photo of any clothing item against a door, wall, or hanger, the AI instantly isolates the garment, crops out the background with 99.4% precision, and normalizes the lighting. This creates a clean, professional-looking digital catalog of your wardrobe.</p>
+            </div>
+          </details>
+
+          <details class="faq-card glass-card">
+            <summary class="faq-question">
+              <span>How does the occasion pairing engine work for college and party wear?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Once you upload your tops, bottoms, shoes, and wearables, you select an occasion like "Daily College" or "Night Club / Party." Our Intelligent Pair Engine uses smart color contrast, garment category metrics, and weather temperature sync to curate matching combinations with a high suitability score.</p>
+            </div>
+          </details>
+
+          <details class="faq-card glass-card">
+            <summary class="faq-question">
+              <span>Can Outfit Planner sync with local weather forecasts?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes! Outfit Planner automatically synchronizes with your local weather forecasts. It recommends appropriate layers (like cardigans, crewnecks, or light jackets) for chilly, rainy college days, and lighter coordinates for hot summer patio parties, ensuring you are comfortable and stylish.</p>
+            </div>
+          </details>
+
+          <details class="faq-card glass-card">
+            <summary class="faq-question">
+              <span>How does the TestFlight beta work for new users?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </summary>
+            <div class="faq-answer">
+              <p>Outfit Planner is currently in private Beta. By entering your Apple ID email address in the request form below, you will receive an invitation to Apple's TestFlight app. From there, you can install the beta, digitize your closet, and try out the AI styling features immediately.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
       <!-- Interactive Newsletter & Signup Forms Showcase -->
       <section class="newsletter-section" id="newsletter">
         <div class="newsletter-container glass-card">
@@ -514,6 +644,7 @@
           <a href="#features" class="foot-link">Features</a>
           <a href="#builder" class="foot-link">Interactive Builder</a>
           <a href="#showcase" class="foot-link">Showcase</a>
+          <a href="#faq" class="foot-link">FAQ</a>
           <a href="#newsletter" class="foot-link">Download Beta</a>
           <a href="#" class="foot-link">Privacy Policy</a>
           <a href="#" class="foot-link">Terms of Service</a>
